@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+        table{
+            width: 64%;
+            margin: 50px auto;
+            border-spacing: 6px;
+        }
+        td{
+             width: 50px;
+            height: 60px;
+            position: relative;
+            overflow: visible;
+            padding: 0;
+            border: none;
+            
+            
+            
+        }
+        
+        td:hover .elemento{
+            width:80px;
+            height: 90px;
+            z-index: 100;
+        }
+        .elemento{
+            font-family: Gill Sans, sans-serif;
+            color: white;
+            font-weight: bolder;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            box-shadow: 2px 1px 7px rgb(109, 106, 106);
+            transition: all 0.4s;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        div{
+            display: flex;
+             flex-direction: column;
+        }
+        .numeroatomico{
+            font-size: 9px;
+            text-align: left;
+            margin-left: 5px;
+            margin-top: 2px;
+        }
+        .icone{
+            text-align: center;
+            font-size: 13px;
+        }
+        .massaatomica{
+            font-size: 9px;
+            text-align: right;
+            margin-right: 5px;
+            margin-bottom: 2px;
+            
+        }
+        .nome{
+            font-size: 0.58vw;
+            text-align: center;
+        }
+        .colspanado{
+            background-color: white;
+            color: white;
+            box-shadow: 0px 0px 0px white;
+            position: relative;
+            z-index: 0;
+        }
+        .colspanado:hover{
+            width:50px;
+            height: 60px;
+        }
+        .metais-alcalinos{
+            background-color: rgb(181, 118, 197);
+            color: #975391;
+            box-shadow: 3px 2px 6px rgb(141, 65, 141);
+        }
+        .alcalinoterrosos{
+            background-color: #7762c0;
+            color: #5a4a8f;
+            box-shadow: 3px 2px 6px #2b04a1;
+        }
+        .semimetais{
+            background-color: rgb(98, 172, 96);
+            color: rgb(79, 133, 78);
+            box-shadow: 3px 2px 6px rgb(24, 121, 20);
+        }
+        .nobre{
+            background-color: rgb(202, 83, 83);
+            color: #913333;
+            box-shadow:3px 2px 6px#9b2424 ;
+        }
+        .ametais-reativos{
+            background-color: #dddf79;
+            color: rgb(148, 153, 84);
+            box-shadow:3px 2px 6px #bec02d ;
+        }
+        .pós-transição{
+            background-color: rgb(117, 207, 207);
+            color: rgb(74, 160, 160);
+            box-shadow:3px 2px 6px rgb(20, 128, 128) ;
+        }
+        .metais{
+            background-color: #5080be;
+            color: #37568f;
+            box-shadow: 3px 2px 6px #3879db;
+        }
+        .latanídeos{
+            background-color: #95b9b6;
+            color: #506e6e;
+            box-shadow: 3px 2px 6px #63878b;
+        }
+        .actinídeos{
+            background-color: #aa6663;
+            color: #725050;
+            box-shadow: 3px 2px 6px #8b6363;
+        }
+        .desconhecido{
+            background-color: #808183;
+            color:#535557;
+            box-shadow: 3px 2px 6px #474646;
+
+        }
+        a{
+            border-radius: 10px;
+            padding: 3px;
+            border: none;
+            background-color: #8fa7c5;
+            font-family:  Gill Sans, sans-serif;
+            font-weight: bolder;
+            color: #687a91;
+            box-shadow: 5px 3px 7px #667fad;
+            transition: all 0.4s;
+            font-size: 1vw;
+            text-decoration: none;
+
+        }
+        a:hover{
+            border: none;
+            background-color: #6e83a0;
+            color: #424f68;
+            font-size: 1.5vw;
+        }
+        a:active{
+            color: #6484ad;
+            background-color: #354d7a;
+            border: solid #354d7a;
+            box-shadow: 5px 3px 6px #354d7a;
+            
+        }
+        
+        
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+             <td >
+                <div class="elemento ametais-reativos" >
+                    <span class="numeroatomico">1</span>
+                    <span class="icone">H</span>
+                    <span class="nome">hidrogênio</span>
+                    <span class="massaatomica">1</span>
+                    
+                </div></td>
+             <td colspan="17" id="colspanado"></td>
+             <td >
+                <div class="elemento nobre">
+                    <span class="numeroatomico">2</span>
+                    <span class="icone">He</span>
+                    <span class="nome">hélio</span>
+                    <span class="massaatomica">4</span>
+                    
+                </div></td> 
+            </tr>
+
+  <!-- começa de outra coluna-->
+
+            <tr>
+              <td >
+                <div class="elemento metais-alcalinos" >
+                    <span class="numeroatomico">3</span>
+                    <span class="icone">Li</span>
+                    <span class="nome" >lítio</span>
+                    <span class="massaatomica">6.94</span>
+                    
+                </div></td>
+                <td >
+                <div class="elemento alcalinoterrosos">
+                    <span class="numeroatomico">4</span>
+                    <span class="icone">Be</span>
+                    <span class="nome">berílio</span>
+                    <span class="massaatomica">9.01</span>
+                    
+                </div></td> 
+             <td colspan="11" class="colspanado"></td>
+             <td >
+                <div class="elemento semimetais" >
+                    <span class="numeroatomico">5</span>
+                    <span class="icone">B</span>
+                    <span class="nome">boro</span>
+                    <span class="massaatomica">10.81</span>
+                    
+                </div></td>
+                <td >
+                <div class="elemento ametais-reativos" >
+                    <span class="numeroatomico">6</span>
+                    <span class="icone">C</span>
+                    <span class="nome">carbono</span>
+                    <span class="massaatomica">12</span>
+                    
+                </div></td>
+                <td >
+                <div class="elemento ametais-reativos" >
+                    <span class="numeroatomico">7</span>
+                    <span class="icone">N</span>
+                    <span class="nome">nitrogênio</span>
+                    <span class="massaatomica">14</span>
+                    
+                </div></td>
+                <td >
+                    
+                <div class="elemento ametais-reativos" >
+                    <span class="numeroatomico">8</span>
+                    <span class="icone">O</span>
+                    <span class="nome">oxigênio</span>
+                    <span class="massaatomica">15</span>
+                    
+                </div></td>
+                <td >
+                    
+                <div class="elemento ametais-reativos" >
+                    <span class="numeroatomico">9</span>
+                    <span class="icone">F</span>
+                    <span class="nome">flúor</span>
+                    <span class="massaatomica">18.99</span>
+                    
+                </div></td>
+             <td >
+                <div class="elemento nobre" >
+                    <span class="numeroatomico">10</span>
+                    <span class="icone">Ne</span>
+                    <span class="nome">neônio</span>
+                    <span class="massaatomica">20.18</span>
+                    
+                </div></td> 
+            </tr>
+
+            <!--começo de outra coluna-->
+
+            <tr>
+              <td >
+                <div class="elemento metais-alcalinos" >
+                    <span class="numeroatomico">11</span>
+                    <span class="icone">Na</span>
+                    <span class="nome">sódio</span>
+                    <span class="massaatomica">22.99</span>
+                    
+                </div></td>
+                <td >
+                <div class="elemento alcalinoterrosos" >
+                    <span class="numeroatomico">12</span>
+                    <span class="icone">Mg</span>
+                    <span class="nome">magnésio</span>
+                    <span class="massaatomica">24.3</span>
+                    
+                </div></td> 
+             <td colspan="11" class="colspanado"></td>
+             <td >
+                    
+                <div class="elemento pós-transição">
+                    <span class="numeroatomico">13</span>
+                    <span class="icone">Al</span>
+                    <span class="nome">alumínio</span>
+                    <span class="massaatomica">26.98</span>
+                    
+                </div></td>
+             <td >
+                <div class="elemento semimetais">
+                    <span class="numeroatomico">14</span>
+                    <span class="icone">Si</span>
+                    <span class="nome">silício</span>
+                    <span class="massaatomica">28.08</span>
+                    
+                </div></td>
+                <td >
+                <div class="elemento ametais-reativos">
+                    <span class="numeroatomico">15</span>
+                    <span class="icone">P</span>
+                    <span class="nome">fósforo</span>
+                    <span class="massaatomica">30.97</span>
+                    
+                </div></td>
+                <td >
+                <div class="elemento ametais-reativos">
+                    <span class="numeroatomico">16</span>
+                    <span class="icone">S</span>
+                    <span class="nome">enxofre</span>
+                    <span class="massaatomica">32.06</span>
+                    
+                </div></td>
+                <td >
+                <div class="elemento ametais-reativos">
+                    <span class="numeroatomico">17</span>
+                    <span class="icone">Cl</span>
+                    <span class="nome">cloro</span>
+                    <span class="massaatomica">35.45</span>
+                    
+                </div></td>
+             <td >
+                <div class="elemento nobre">
+                    <span class="numeroatomico">18</span>
+                    <span class="icone">Ar</span>
+                    <span class="nome">argônio</span>
+                    <span class="massaatomica">39.94</span>
+                    
+                </div></td> 
+            </tr>
+
+
+            <!--começo de outra coluna-->
+
+            <tr>
+              <td >
+                <div class="elemento metais-alcalinos">
+                    <span class="numeroatomico">19</span>
+                    <span class="icone">K</span>
+                    <span class="nome">potássio</span>
+                    <span class="massaatomica">39.09</span>
+                    
+                </div></td>
+                <td >
+                <div class="elemento alcalinoterrosos">
+                    <span class="numeroatomico">20</span>
+                    <span class="icone">Ca</span>
+                    <span class="nome">cálcio</span>
+                    <span class="massaatomica">40</span>
+                    
+                </div></td>
+                 <td >
+                    
+                <div class="elemento metais">
+                    <span class="numeroatomico">21</span>
+                    <span class="icone">Sc</span>
+                    <span class="nome">escândio</span>
+                    <span class="massaatomica">44.95</span>
+                    
+                </div></td>
+
+             <td colspan="1" class="colspanado"></td><!--esse é o colspan-->
+             
+             
+                <td >
+                <div class="elemento metais" >
+                    <span class="numeroatomico">22</span>
+                    <span class="icone">Ti</span>
+                    <span class="nome">titânio</span>
+                    <span class="massaatomica">47.86</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">23</span>
+                    <span class="icone">V</span>
+                    <span class="nome">vanádio</span>
+                    <span class="massaatomica">50.94</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">24</span>
+                    <span class="icone">Cr</span>
+                    <span class="nome">cromo</span>
+                    <span class="massaatomica">51.99</span>
+                    
+                </div></td>
+             <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">25</span>
+                    <span class="icone">Mn</span>
+                    <span class="nome">manganês</span>
+                    <span class="massaatomica">54.93</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">26</span>
+                    <span class="icone">Fe</span>
+                    <span class="nome">ferro</span>
+                    <span class="massaatomica">55.84</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">27</span>
+                    <span class="icone">Co</span>
+                    <span class="nome">Cobalto</span>
+                    <span class="massaatomica">58.93</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">28</span>
+                    <span class="icone">Ni</span>
+                    <span class="nome">níquel</span>
+                    <span class="massaatomica">58.69</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">29</span>
+                    <span class="icone">Cu</span>
+                    <span class="nome">cobre</span>
+                    <span class="massaatomica">63.54</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">30</span>
+                    <span class="icone">Zn</span>
+                    <span class="nome">zinco</span>
+                    <span class="massaatomica">65.38</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento pós-transição">
+                    <span class="numeroatomico">31</span>
+                    <span class="icone">Ga</span>
+                    <span class="nome">gálio</span>
+                    <span class="massaatomica">69.72</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento semimetais">
+                    <span class="numeroatomico">32</span>
+                    <span class="icone">Ge</span>
+                    <span class="nome">germânio</span>
+                    <span class="massaatomica">72.64</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento semimetais">
+                    <span class="numeroatomico">33</span>
+                    <span class="icone">As</span>
+                    <span class="nome">arsênio</span>
+                    <span class="massaatomica">74.92</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento ametais-reativos">
+                    <span class="numeroatomico">34</span>
+                    <span class="icone">Se</span>
+                    <span class="nome">Selênio</span>
+                    <span class="massaatomica">78.96</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento ametais-reativos">
+                    <span class="numeroatomico">35</span>
+                    <span class="icone">Br</span>
+                    <span class="nome">bromo</span>
+                    <span class="massaatomica">79.90</span>
+                    
+                </div></td>  
+                <td>
+                <div class="elemento nobre">
+                    <span class="numeroatomico">36</span>
+                    <span class="icone">Kr</span>
+                    <span class="nome">criptônio</span>
+                    <span class="massaatomica">83.79</span>
+                    
+                </div></td>  
+            </tr>
+            
+
+            <!--começo de outra coluna-->
+
+            <tr>
+              <td>
+                <div class="elemento metais-alcalinos">
+                    <span class="numeroatomico">37</span>
+                    <span class="icone">Rb</span>
+                    <span class="nome">rubídeo</span>
+                    <span class="massaatomica">85.46</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento alcalinoterrosos">
+                    <span class="numeroatomico">38</span>
+                    <span class="icone">Sr</span>
+                    <span class="nome">estrôncio</span>
+                    <span class="massaatomica">87.62</span>
+                    
+                </div></td>
+                
+                <td>
+                    
+                <div class="elemento metais">
+                    <span class="numeroatomico">39</span>
+                    <span class="icone">Y</span>
+                    <span class="nome">ítrio</span>
+                    <span class="massaatomica">88.90</span>
+                    
+                </div></td>
+
+             <td colspan="" class="colspanado"></td><!--esse é o colspan-->
+             
+             
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">40</span>
+                    <span class="icone">Zr</span>
+                    <span class="nome">zircônio</span>
+                    <span class="massaatomica">91.22</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">41</span>
+                    <span class="icone">Nb</span>
+                    <span class="nome">nióbio</span>
+                    <span class="massaatomica">92.90</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">42</span>
+                    <span class="icone">Mo</span>
+                    <span class="nome">molibdênio</span>
+                    <span class="massaatomica">95.95</span>
+                    
+                </div></td>
+             <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">43</span>
+                    <span class="icone">Tc</span>
+                    <span class="nome">Tecnécio</span>
+                    <span class="massaatomica">98</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">44</span>
+                    <span class="icone">Ru</span>
+                    <span class="nome">rutênio</span>
+                    <span class="massaatomica">101.07</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">45</span>
+                    <span class="icone">Rh</span>
+                    <span class="nome">ródio</span>
+                    <span class="massaatomica">102.91</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">46</span>
+                    <span class="icone">Pd</span>
+                    <span class="nome">paládio</span>
+                    <span class="massaatomica">106.42</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">47</span>
+                    <span class="icone">Ag</span>
+                    <span class="nome">prata</span>
+                    <span class="massaatomica">107.87</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">48</span>
+                    <span class="icone">Cd</span>
+                    <span class="nome">cádmio</span>
+                    <span class="massaatomica">112.41</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento pós-transição">
+                    <span class="numeroatomico">49</span>
+                    <span class="icone">In</span>
+                    <span class="nome">indio</span>
+                    <span class="massaatomica">114.82</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento pós-transição">
+                    <span class="numeroatomico">50</span>
+                    <span class="icone">Sn</span>
+                    <span class="nome">estanho</span>
+                    <span class="massaatomica">118.71</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento semimetais">
+                    <span class="numeroatomico">51</span>
+                    <span class="icone">Sb</span>
+                    <span class="nome">antimônio</span>
+                    <span class="massaatomica">121.76</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento semimetais">
+                    <span class="numeroatomico">52</span>
+                    <span class="icone">Te</span>
+                    <span class="nome">telúrio</span>
+                    <span class="massaatomica">127.60</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento ametais-reativos">
+                    <span class="numeroatomico">53</span>
+                    <span class="icone">I</span>
+                    <span class="nome">iodo</span>
+                    <span class="massaatomica">126.90</span>
+                    
+                </div></td>  
+                <td>
+                <div class="elemento nobre">
+                    <span class="numeroatomico">54</span>
+                    <span class="icone">Xe</span>
+                    <span class="nome">xenônio</span>
+                    <span class="massaatomica">131.29</span>
+                    
+                </div></td>  
+            </tr>
+            
+
+            <!--começo de outra coluna-->
+
+            <tr>
+              <td>
+                <div class="elemento metais-alcalinos">
+                    <span class="numeroatomico">55</span>
+                    <span class="icone">Cs</span>
+                    <span class="nome">césio</span>
+                    <span class="massaatomica">132.91</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento alcalinoterrosos">
+                    <span class="numeroatomico">56</span>
+                    <span class="icone">Ba</span>
+                    <span class="nome">bário</span>
+                    <span class="massaatomica">137.33</span>
+                    
+                </div></td>
+                
+                <td>
+                    
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">51</span>
+                    <span class="icone">La</span>
+                    <span class="nome">lantânio</span>
+                    <span class="massaatomica">138.91</span>
+                    
+                </div></td>
+
+             <td colspan="" class="colspanado"></td><!--esse é o colspan-->
+             
+             
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">72</span>
+                    <span class="icone">Hf</span>
+                    <span class="nome">háfnio</span>
+                    <span class="massaatomica">178.49</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">73</span>
+                    <span class="icone">Ta</span>
+                    <span class="nome">tântalo</span>
+                    <span class="massaatomica">180.95</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">74</span>
+                    <span class="icone">W</span>
+                    <span class="nome">tungstênio</span>
+                    <span class="massaatomica">183.84</span>
+                    
+                </div></td>
+             <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">75</span>
+                    <span class="icone">Re</span>
+                    <span class="nome">rênio</span>
+                    <span class="massaatomica">186.21</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">76</span>
+                    <span class="icone">Os</span>
+                    <span class="nome">ósmio</span>
+                    <span class="massaatomica">190.23</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">77</span>
+                    <span class="icone">Ir</span>
+                    <span class="nome">irídio</span>
+                    <span class="massaatomica">192.22</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">78</span>
+                    <span class="icone">Pt</span>
+                    <span class="nome">platina</span>
+                    <span class="massaatomica">195.08</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">79</span>
+                    <span class="icone">Au</span>
+                    <span class="nome">ouro</span>
+                    <span class="massaatomica">196.97</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">80</span>
+                    <span class="icone">Hg</span>
+                    <span class="nome">mercúrio</span>
+                    <span class="massaatomica">200.59</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento pós-transição"> 
+                    <span class="numeroatomico">81</span>
+                    <span class="icone">Ti</span>
+                    <span class="nome">tálio</span>
+                    <span class="massaatomica">204.38</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento pós-transição">
+                    <span class="numeroatomico">82</span>
+                    <span class="icone">Pb</span>
+                    <span class="nome">chumbo</span>
+                    <span class="massaatomica">207.20</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento pós-transição">
+                    <span class="numeroatomico">83</span>
+                    <span class="icone">Bi</span>
+                    <span class="nome">bismuto</span>
+                    <span class="massaatomica">208.98</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento pós-transição">
+                    <span class="numeroatomico">84</span>
+                    <span class="icone">Po</span>
+                    <span class="nome">polônio</span>
+                    <span class="massaatomica">209</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento pós-transição">
+                    <span class="numeroatomico">85</span>
+                    <span class="icone">At</span>
+                    <span class="nome">astato</span>
+                    <span class="massaatomica">210</span>
+                    
+                </div></td>  
+                <td>
+                <div class="elemento nobre">
+                    <span class="numeroatomico">86</span>
+                    <span class="icone">Rn</span>
+                    <span class="nome">randônio</span>
+                    <span class="massaatomica">222</span>
+                    
+                </div></td>
+            </tr>
+            
+
+            <!--começo de outra coluna-->
+
+            <tr>
+              <td>
+                <div class="elemento metais-alcalinos">
+                    <span class="numeroatomico">87</span>
+                    <span class="icone">Fr</span>
+                    <span class="nome">Frâncio</span>
+                    <span class="massaatomica">223</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento alcalinoterrosos">
+                    <span class="numeroatomico">88</span>
+                    <span class="icone">Ra</span>
+                    <span class="nome">rádio</span>
+                    <span class="massaatomica">226</span>
+                    
+                </div></td>
+                
+                <td>                   
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">89</span>
+                    <span class="icone">Ac</span>
+                    <span class="nome">actíneo</span>
+                    <span class="massaatomica">227</span>
+                    
+                </div></td>
+
+             <td colspan="" class="colspanado"></td><!--esse é o colspan-->
+            
+             
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">104</span>
+                    <span class="icone">Rf</span>
+                    <span class="nome">rutherfórdio</span>
+                    <span class="massaatomica">267</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">105</span>
+                    <span class="icone">Db</span>
+                    <span class="nome">dúbnio</span>
+                    <span class="massaatomica">262</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">106</span>
+                    <span class="icone">Sg</span>
+                    <span class="nome">seabórgio</span>
+                    <span class="massaatomica">269</span>
+                    
+                </div></td>
+             <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">107</span>
+                    <span class="icone">Bh</span>
+                    <span class="nome">bohrio</span>
+                    <span class="massaatomica">264</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento metais">
+                    <span class="numeroatomico">108</span>
+                    <span class="icone">Hs</span>
+                    <span class="nome">sássio</span>
+                    <span class="massaatomica">269</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento desconhecido">
+                    <span class="numeroatomico">109</span>
+                    <span class="icone">Mt</span>
+                    <span class="nome">meitnério</span>
+                    <span class="massaatomica">278</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento desconhecido">
+                    <span class="numeroatomico">110</span>
+                    <span class="icone">Ds</span>
+                    <span class="nome">darmstádtio</span>
+                    <span class="massaatomica">281</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento desconhecido">
+                    <span class="numeroatomico">111</span>
+                    <span class="icone">Rg</span>
+                    <span class="nome">roentgênio</span>
+                    <span class="massaatomica">282</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento desconhecido">
+                    <span class="numeroatomico">112</span>
+                    <span class="icone">Cn</span>
+                    <span class="nome">copernício</span>
+                    <span class="massaatomica">285</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento desconhecido">
+                    <span class="numeroatomico">113</span>
+                    <span class="icone">Nh</span>
+                    <span class="nome">nihônio</span>
+                    <span class="massaatomica">286</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento desconhecido">
+                    <span class="numeroatomico">114</span>
+                    <span class="icone">Fl</span>
+                    <span class="nome">fleróvio</span>
+                    <span class="massaatomica">289</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento desconhecido">
+                    <span class="numeroatomico">115</span>
+                    <span class="icone">Mc</span>
+                    <span class="nome">moscóvio</span>
+                    <span class="massaatomica">289</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento desconhecido">
+                    <span class="numeroatomico">116</span>
+                    <span class="icone">H</span>
+                    <span class="nome">Livermório</span>
+                    <span class="massaatomica">293</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento desconhecido">
+                    <span class="numeroatomico">117</span>
+                    <span class="icone">Ts</span>
+                    <span class="nome">Tenesso</span>
+                    <span class="massaatomica">294</span>
+                    
+                </div></td>  
+                <td>
+                <div class="elemento desconhecido">
+                    <span class="numeroatomico">118</span>
+                    <span class="icone">Og</span>
+                    <span class="nome">Oganessônio</span>
+                    <span class="massaatomica">294</span>
+                    
+                </div></td>  
+            </tr>
+            
+
+            <!--começo de outra coluna-->
+            <tr>
+                <td class="colspanado" colspan="18">
+                            <div>
+                                <span class="numeroatomico"></span>
+                                <span class="icone"></span>
+                                <span class="nome"></span>
+                                <span class="massaatomica"></span>
+                                
+                            </div></td>
+            </tr>
+
+                <!--nova coluna-->
+
+
+            <tr>
+              
+             <td colspan="4" class="colspanado"></td><!--esse é o colspan-->
+             
+                
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">58</span>
+                    <span class="icone">Ce</span>
+                    <span class="nome">cério</span>
+                    <span class="massaatomica">140.12</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">59</span>
+                    <span class="icone">Pr</span>
+                    <span class="nome">praseodímio</span>
+                    <span class="massaatomica">140.91</span>
+                    
+                </div></td>
+             <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">60</span>
+                    <span class="icone">Nd</span>
+                    <span class="nome">neodímio</span>
+                    <span class="massaatomica">144.24</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">61</span>
+                    <span class="icone">Pm</span>
+                    <span class="nome">promécio</span>
+                    <span class="massaatomica">145</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">62</span>
+                    <span class="icone">Sm</span>
+                    <span class="nome">samário</span>
+                    <span class="massaatomica">150.36</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">63</span>
+                    <span class="icone">Eu</span>
+                    <span class="nome">európio</span>
+                    <span class="massaatomica">151.96</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">64</span>
+                    <span class="icone">Gd</span>
+                    <span class="nome">gadolínio</span>
+                    <span class="massaatomica">157.25</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">65</span>
+                    <span class="icone">Tb</span>
+                    <span class="nome">térbio</span>
+                    <span class="massaatomica">158.93</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">66</span>
+                    <span class="icone">Dy</span>
+                    <span class="nome">disprósio</span>
+                    <span class="massaatomica">162.5</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">67</span>
+                    <span class="icone">Ho</span>
+                    <span class="nome">hólmio</span>
+                    <span class="massaatomica">164.93</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">68</span>
+                    <span class="icone">Er</span>
+                    <span class="nome">érbio</span>
+                    <span class="massaatomica">167.26</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">69</span>
+                    <span class="icone">Tm</span>
+                    <span class="nome">túlio</span>
+                    <span class="massaatomica">168.93</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">70</span>
+                    <span class="icone">Yb</span>
+                    <span class="nome">itérbio</span>
+                    <span class="massaatomica">173.04</span>
+                    
+                </div></td>  
+                <td>
+                <div class="elemento latanídeos">
+                    <span class="numeroatomico">71</span>
+                    <span class="icone">Lu</span>
+                    <span class="nome">lutécio</span>
+                    <span class="massaatomica">174.97</span>
+                    
+                </div></td> 
+            </tr>
+
+            <!--nova coluna-->
+
+
+            <tr>
+              
+             <td colspan="4" class="colspanado"></td><!--esse é o colspan-->
+             
+                
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">90</span>
+                    <span class="icone">Th</span>
+                    <span class="nome">tório</span>
+                    <span class="massaatomica">232.04</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">91</span>
+                    <span class="icone">Pa</span>
+                    <span class="nome">Protactínio</span>
+                    <span class="massaatomica">231.04</span>
+                    
+                </div></td>
+             <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">92</span>
+                    <span class="icone">U</span>
+                    <span class="nome">urânio</span>
+                    <span class="massaatomica">238.03</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">93</span>
+                    <span class="icone">Np</span>
+                    <span class="nome">Neptúnio</span>
+                    <span class="massaatomica">237.05</span>
+                    
+                </div></td>
+                 <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">94</span>
+                    <span class="icone">Pu</span>
+                    <span class="nome">pultônio</span>
+                    <span class="massaatomica">244</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">95</span>
+                    <span class="icone">Am</span>
+                    <span class="nome">amerício</span>
+                    <span class="massaatomica">243</span>
+                    
+                </div></td> 
+                
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">96</span>
+                    <span class="icone">Cm</span>
+                    <span class="nome">cúrio</span>
+                    <span class="massaatomica">247</span>
+                    
+                </div></td>
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">97</span>
+                    <span class="icone">Bk</span>
+                    <span class="nome">Berquélio</span>
+                    <span class="massaatomica">247</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">98</span>
+                    <span class="icone">Cf</span>
+                    <span class="nome">califórnio</span>
+                    <span class="massaatomica">251</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">99</span>
+                    <span class="icone">Es</span>
+                    <span class="nome">Einstênio</span>
+                    <span class="massaatomica">252</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">100</span>
+                    <span class="icone">Fm</span>
+                    <span class="nome">Férmio</span>
+                    <span class="massaatomica">257</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">101</span>
+                    <span class="icone">Md</span>
+                    <span class="nome">Mendelévio</span>
+                    <span class="massaatomica">258</span>
+                    
+                </div></td> 
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">102</span>
+                    <span class="icone">No</span>
+                    <span class="nome">Nobélio</span>
+                    <span class="massaatomica">259</span>
+                    
+                </div></td>  
+                <td>
+                <div class="elemento actinídeos">
+                    <span class="numeroatomico">103</span>
+                    <span class="icone">Lr</span>
+                    <span class="nome">Laurêncio</span>
+                    <span class="massaatomica">262</span>
+                    
+                </div></td>
+            </tr>
+            
+        </table>
+        <a href="index.html">Horários</a>
+    </body>
+</html>
